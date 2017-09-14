@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <h3>프로젝트 결과물</h3>
+    <button id="num1">1번</button>
+    <button>2번</button>
+    <button>3번</button>
+    <div id="slideshare">
+      <iframe id="ss-1" class="sr-only" src="//www.slideshare.net/slideshow/embed_code/key/sK6LMKPbOEJMep" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"></div>
+      <iframe id="ss-2" src="//www.slideshare.net/slideshow/embed_code/key/NoQtYpLL9U1crN" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+      $("#num1").click(function(){
+          $("iframe#ss-1").removeClass("sr-only");
+          $("iframe#ss-2").addClass("sr-only");
+      });
+  });
+</script>

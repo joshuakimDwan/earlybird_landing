@@ -1,5 +1,6 @@
 {% load staticfiles %}
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,165 +8,35 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Earlybird</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.js' %}" type="text/javascript"></script>
+
   <style>
+    * {
+      font-family: 'SpoqaHanSans', 'sans-serif';
+      font-weight:400 !important;
+    }
     .container {
-      border: 1px solid black;
+{#      border: 1px solid black;#}
     }
   </style>
 </head>
 <body>
   <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <h3 class=""><a href="#">Logo</a></h3>
-        <h1>Title</h1>
-        <h2>sub-title</h2>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <h1>얼리버드는</h1>
-      </div>
-      <div class="row">
-        <div class="panel panel-default">
-          <div class="panel-heading">sentence</div>
-          <div class="panel-body">description</div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">sentence</div>
-          <div class="panel-body">description</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <h1>이런 사람을 찾습니다.</h1>
-      </div>
-      <div class="row">
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <h1>데이터 사이언스 스터디 10주 후,</h1>
-      </div>
-      <div class="row">
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">title</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <h3>커리큘럼</h3>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>John</td>
-                <td>Doe</td>
-              </tr>
-              <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-              </tr>
-              <tr>
-                <td>July</td>
-                <td>Dooley</td>
-              </tr>
-              <tr>
-                <td colspan="2">July</td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <h1>1기 수강생들이 말하는 얼리버드 스터디</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="thumbnail">
-            <img src="{% static 'img/black_thumb.jpg' %}"" alt="">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="thumbnail">
-            <img src="{% static 'img/black_thumb.jpg' %}"" alt="">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <h3>프로젝트 결과물</h3>
-        <button id="num1">1번</button>
-        <button>2번</button>
-        <button>3번</button>
-        <div id="slideshare">
-          <iframe id="ss-1" class="sr-only" src="//www.slideshare.net/slideshow/embed_code/key/sK6LMKPbOEJMep" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/thinkoutsidetheslide/converting-your-written-content-to-a-slideshare-deck" title="Converting your written content to a SlideShare deck" target="_blank"></a></div>
-          <iframe id="ss-2" src="//www.slideshare.net/slideshow/embed_code/key/NoQtYpLL9U1crN" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/StudyPro/pccn-review-part-1" title="Pccn Review Part 1" target="_blank"></a></div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <h3>세부 내용</h3>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <h3>신청 방법</h3>
-      </div>
-    </div>
+    {% include 'home/title.html' %}
+    {% include 'home/intro.html' %}
+    {% include 'home/requirements.html' %}
+    {% include 'home/will_be.html' %}
+    {% include 'home/curriculum.html' %}
+    {% include 'home/review.html' %}
+    {% include 'home/project.html' %}
+    {% include 'home/detail.html' %}
+    {% include 'home/apply.html' %}
   </div>
-
-  <script>
-    $(document).ready(function(){
-        $("#num1").click(function(){
-            $("iframe#ss-1").removeClass("sr-only");
-            $("iframe#ss-2").addClass("sr-only");
-        });
-    });
-  </script>
 </body>
 </html>
 
 
-$("h1, h2, p").removeClass("blue");
