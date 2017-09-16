@@ -1,8 +1,5 @@
 ### Additional Configurations ###
 
-# static files are collected through `python manage.py collectstatic`
-static/
-
 
 ### Created by https://www.gitignore.io/api/vim,macos,django,python,pycharm+all ###
 ### Django ###
