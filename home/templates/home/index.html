@@ -16,11 +16,19 @@
   <script src="https://use.fontawesome.com/42024ebc3d.js"></script>
 
   <style>
-
+    body, p {
+      line-height: 1.8;
+    }
+    #title-outer-box {
+      background-image: url("{% static 'img/main_bg2.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
 <body>
-  <div class="container-fluid" style="background-color: #263238;">
+  <div id="title-outer-box" class="container-fluid">
     {% include 'home/title.html' %}
   </div>
   <div class="container-fluid">
@@ -41,12 +49,14 @@
   <div class="container-fluid">
     {% include 'home/project.html' %}
   </div>
+  <br>
   <div class="container-fluid">
     {% include 'home/detail.html' %}
   </div>
   <div class="container-fluid">
     {% include 'home/apply.html' %}
   </div>
+  <br>
 </body>
 </html>
 
